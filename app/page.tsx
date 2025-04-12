@@ -40,9 +40,9 @@ export default function Home () {
   }
 
   return (
-    <div className="relative flex justify-center items-center min-h-screen w-full">
-      <div className="rounded-sm p-5 w-full flex flex-col max-w-[400px]">
-        <form onSubmit={handleSubmit} className="flex flex-col gap-3 items-center w-full bg-blue-600" action="">
+    <div className="bg-white flex flex-col relative justify-center items-center min-h-screen w-full p-5">
+      <div className="items-center justify-center rounded-sm p-5 w-full flex flex-col max-w-[400px]">
+        <form onSubmit={handleSubmit} className="p-4 flex justify-center flex-col gap-3 items-center w-full bg-blue-500 rounded-sm">
           <h2>Traveling List</h2>
           <div className="w-full flex flex-col">
             <label htmlFor="select">
@@ -83,15 +83,15 @@ export default function Home () {
               title="isPacked" 
             />
           </div>
-          <button className="w-max px-3 py-2 bg-blue-500" type="submit">Add</button>
+          <button className="w-max px-3 py-2 bg-blue-300" type="submit">Add</button>
         </form>
       </div>
-      <div className="mt-6">
+      <div className="mt-6 bg-black p-5">
         <h3 className="text-lg font-semibold">🧳 Your Items</h3>
         <ul className="list-disc list-inside">
-          {travelItems.map((item, index) => (
-            <li key={index}>
-              {item.name} – {item.packed ? '✅ Packed' : '❌ Not Packed'}
+          {travelItems.map(({name, numberOfItems, packed}, id) => (
+            <li key={id}>
+              {numberOfItems} {name} – {packed ? '✅ Packed' : '❌ Not Packed'}
             </li>
           ))}
         </ul>
