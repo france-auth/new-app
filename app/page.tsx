@@ -46,11 +46,11 @@ export default function Home () {
           onSubmit={handleSubmit} 
           className="gap-4 p-4 flex justify-center flex-col items-center w-full bg-blue-500 rounded-lg"
         >
-          <h2 className="text-xl text-semibold">Traveling List</h2>
+          <h2 className="text-xl font-semibold">Traveling List</h2>
           <div className="w-full flex flex-col gap-2">
             <label htmlFor="select">How many items?</label>
             <select 
-              className="text-black" 
+              className="text-black border-[1px]" 
               name="select" 
               title="select" 
               onChange={handleItemNumber} 
@@ -71,7 +71,7 @@ export default function Home () {
               title="items" 
               type="text" 
               placeholder="e.g Toothpaste" 
-              className="outline-0 border-[1px] bg-fuchsia-100"
+              className="outline-0 border-[1px] bg-black rounded-lg"
             />
           </div>
           <div className="flex">
@@ -85,10 +85,10 @@ export default function Home () {
               title="isPacked" 
             />
           </div>
-          <button className="w-max px-3 py-2 bg-black" type="submit">Add</button>
+          <button className="mx-auto w-max rounded-lg px-5 py-2 bg-black" type="submit">Add</button>
         </form>
       </div>
-      <div className="max1-w-[400px] rounded-lg mt-6 bg-black p-5 flex flex-col justify-center items-center">
+      <div className="max-w-[400px] rounded-lg mt-6 bg-black p-5 flex flex-col justify-center items-center">
         <h3 className="text-xl font-semibold">🧳 Your Items</h3>
         <ul className="list-disc list-inside">
           {travelItems.map(({name, numberOfItems, packed}, id) => (
