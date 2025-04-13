@@ -40,7 +40,7 @@ export default function Home () {
   }
 
   return (
-    <div className="bg-white flex flex-col relative justify-center items-center min-h-screen w-full p-5">
+    <div className="bg-white flex flex-col relative justify-center items-center min-h-3/4 w-full p-5">
       <div className="items-center justify-center rounded-sm p-5 w-full flex flex-col max-w-[400px]">
         <form 
           onSubmit={handleSubmit} 
@@ -89,7 +89,7 @@ export default function Home () {
           <button className="mx-auto w-max rounded-lg px-5 py-2 bg-black" type="submit">Add</button>
         </form>
       </div>
-      <div className="max-w-[400px] rounded-lg mt-6 bg-black p-5 flex flex-col justify-center items-center">
+      <div className="max-w-[400px] rounded-lg mt-6 bg-black p-5 flex flex-col justify-center items-center gap-3">
         <h3 className="text-xl font-semibold">🧳 Your Items</h3>
         <ul className="list-disc list-inside">
           {travelItems.map(({name, numberOfItems, packed}, id) => (
