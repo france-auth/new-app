@@ -40,7 +40,7 @@ export default function Home () {
   }
 
   return (
-    <div className="bg-white flex flex-col relative justify-center items-center min-h-full w-full p-5">
+    <div className="bg-white flex flex-col relative justify-center items-center min-h-screen w-full p-5">
       <div className="items-center justify-center rounded-sm p-5 w-full flex flex-col max-w-[400px]">
         <form 
           onSubmit={handleSubmit} 
