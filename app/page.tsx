@@ -50,7 +50,7 @@ export default function Home () {
           <div className="w-full flex flex-col gap-2">
             <label htmlFor="select">How many items?</label>
             <select 
-              className="text-black border-[1px]" 
+              className="text-black border-[1px] px-2 py-1 rounded-lg" 
               name="select" 
               title="select" 
               onChange={handleItemNumber} 
@@ -70,11 +70,12 @@ export default function Home () {
               onChange={handleItemName}
               title="items" 
               type="text" 
+              required
               placeholder="e.g Toothpaste" 
-              className="outline-0 border-[1px] bg-black rounded-lg"
+              className="px-2 py-1 outline-0 border-[1px] bg-black rounded-lg"
             />
           </div>
-          <div className="flex">
+          <div className="flex gap-3">
             <label htmlFor="isPacked">Is the item packed?</label>
             <input 
               checked={isPacked}
