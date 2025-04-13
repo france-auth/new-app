@@ -44,7 +44,7 @@ export default function Home () {
       <div className="items-center justify-center rounded-sm p-5 w-full flex flex-col max-w-[400px]">
         <form 
           onSubmit={handleSubmit} 
-          className="gap-4 p-4 flex justify-center flex-col gap-3 items-center w-full bg-blue-500 rounded-lg"
+          className="gap-4 p-4 flex justify-center flex-col items-center w-full bg-blue-500 rounded-lg"
         >
           <h2 className="text-xl text-semibold">Traveling List</h2>
           <div className="w-full flex flex-col gap-2">
