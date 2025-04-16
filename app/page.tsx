@@ -41,7 +41,7 @@ export default function Home () {
 
   const handDelete = () => {
     const lastItem = travelItems.length - 1
-    const newTravelItems = [...travelItems.slice(0, lastItem - 1)]
+    const newTravelItems = [...travelItems.slice(0, lastItem)]
     setTravelItems(() => [...newTravelItems])
   }
 
