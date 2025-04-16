@@ -39,6 +39,12 @@ export default function Home () {
     setIsPacked(false)
   }
 
+  const handDelete = () => {
+    const lastItem = travelItems.length - 1
+    const newTravelItems = [...travelItems.slice(0, lastItem - 1)]
+    setTravelItems(() => [...newTravelItems])
+  }
+
   return (
     <div className="bg-white flex flex-col relative justify-center items-center min-h-screen w-full p-5">
       <div className="items-center justify-center rounded-sm p-5 w-full flex flex-col max-w-[400px]">
@@ -87,6 +93,7 @@ export default function Home () {
             />
           </div>
           <button className="mx-auto w-max rounded-lg px-5 py-2 bg-black" type="submit">Add</button>
+          <button className="mx-auto w-max rounded-lg px-5 py-2 bg-red-600" type="button" onClick={handDelete} >Delete</button>
         </form>
       </div>
       <div className="max-w-[400px] rounded-lg mt-6 bg-black p-5 flex flex-col justify-center items-center gap-3">
